@@ -42,10 +42,10 @@ app.use((err, req, res, next) => {
 });
 
 
-app.use(express.static(path.join(__dirname, "./public/build")));
+app.use(express.static(path.join(__dirname, "./frontend/build")));
 // This is a common route also know as wildcard route if no route match then it takes this route 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "public/build/index.html"));
+  res.sendFile(path.resolve(__dirname, "frontend/build/index.html"));
 });
 
 // Server Port Connection 
