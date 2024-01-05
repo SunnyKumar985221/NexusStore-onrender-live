@@ -42,13 +42,13 @@ app.use((err, req, res, next) => {
 });
 
 
-app.use(express.static(path.join(__dirname, "./frontend/build")));
-// This is a common route also know as wildcard route if no route match then it takes this route 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "frontend/build/index.html"));
-});
+// app.use(express.static(path.join(__dirname, "./frontend/build")));
+// // This is a common route also know as wildcard route if no route match then it takes this route 
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "frontend/build/index.html"));
+// });
 
-// Server Port Connection 
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on PORT : ${process.env.PORT}`);
-});
+// // Server Port Connection 
+// app.listen(process.env.PORT, () => {
+//   console.log(`Server is running on PORT : ${process.env.PORT}`);
+// });
