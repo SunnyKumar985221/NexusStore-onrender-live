@@ -5,13 +5,19 @@ const path = require("path");
 const dotenv = require("dotenv").config({ path: '.env' });
 const connectDatabase = require("./db/Database");
 connectDatabase();
-
 const cors = require('cors');
 app.use(cors({
   origin: "http://localhost:3000",
   credentials: true,
 }));
+function test(){
+  console.log("function inside");
+  console.log("function inside2");
+  console.log("function inside3");
+  console.log("function inside4");
+}
 
+test()
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());

@@ -8,8 +8,7 @@
   },
   "scripts": {
     "dev": "nodemon app.js",
-    "start": "node app.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false"
+    "start": "node app.js"
   },
   "author": "shahriar Sajeeb",
   "license": "ISC",

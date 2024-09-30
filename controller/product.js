@@ -159,4 +159,28 @@ router.get(
     }
   })
 );
+
+
+router.get("/all", async (req, res, next) => {
+  try {
+    const products = await Product.aggregate([
+      {
+        $group : {
+          _id:"$discountPrice"
+
+        }
+      }
+    ]);
+    res.status(200).json(products);
+  } catch (error) {
+    return next(createError(400, "Error Occured"));
+  }
+}
+);
+
+
+
+
+
+
 module.exports = router;
